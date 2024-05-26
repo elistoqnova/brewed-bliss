@@ -1,0 +1,263 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #2a2a2a;
+  --secondary-color: #6e9181;
+  --primary-text-color: #0f0101;
+  --secondary-text-color: #e2e2e2;
+
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+
+section {
+  padding: 50px 100px;
+}
+
+/* NAVIGATION BAR */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 100px;
+  background-color: var(--secondary-text-color);
+  box-shadow: var(--box-shadow);
+}
+
+.logo img{
+  height: 8rem;
+  width: 6rem;
+  position: fixed;
+  top:-10px;
+  left: 100px;
+  z-index: 1;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border: 1px solid black;
+  animation: moving 2s ease-in-out 1;
+}
+
+@keyframes moving {
+  from {
+    top: -180px;
+  }
+  to {
+    top: -10px;
+  }
+}
+
+header a {
+  color: var(--primary-text-color);
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu a {
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.2);
+}
+
+/* TODO:  
+  .menu a:hover {
+  }
+*/
+
+.home {
+  min-height: 100vh;
+  background-image: url(./img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home-text h1 {
+  font-size: 5.2em;
+  margin-bottom: -30px;
+  text-transform: uppercase;
+}
+
+.home-text h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+   white-space: nowrap; /*prevents the text from wrapping onto the next line and keeps it all on a single line, no matter how long it is. */
+  overflow: hidden;
+  margin-block: 10px;
+  animation: typing 2s ease-in-out 1;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-img img{
+  border-radius: 0.5rem;
+  width: 600px;
+}
+
+.about-text h2, .service-heading h2{
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.1rem;
+}
+
+.about-text .btn {
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.service {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e8e9eb;
+}
+
+.service-heading {
+  text-align: center;
+}
+
+ .service-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Box Styles */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.box img {
+  border-radius: 0.5rem;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+}
+
+.box h3 {
+  margin-bottom: 0.5rem;
+}
+
+.box p {
+  margin-bottom: 1rem;
+}
+
+.box a {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-block: 1rem;
+  border: 1px solid black;
+  color: var(--secondary-text-color);
+  background-color: var(--primary-text-color);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.box a:hover {
+  background-color: transparent;
+  color: var(--primary-text-color);
+  transform: scale(1.1);
+}
+
+.end-line {
+  width: 100%;
+  min-height: 50vh;
+  background-image: url(./img/pexels-goumbik-942805.jpg);
+  background-size: cover;
+  background-position: center;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.5rem; */
+}
+
+.end-line p {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  /* font-weight: 700; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
