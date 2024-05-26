@@ -88,14 +88,9 @@ header a {
   transform: scale(1.2);
 }
 
-/* TODO:  
-  .menu a:hover {
-  }
-*/
-
 .home {
   min-height: 100vh;
-  background-image: url(./img/bg.jpg);
+  background-image: url(bg.jpg);
   background-size: cover;
   background-position: center;
   display: grid;
@@ -228,7 +223,7 @@ header a {
 .end-line {
   width: 100%;
   min-height: 50vh;
-  background-image: url(./img/pexels-goumbik-942805.jpg);
+  background-image: url(pexels-goumbik-942805.jpg);
   background-size: cover;
   background-position: center;
   /* display: grid;
